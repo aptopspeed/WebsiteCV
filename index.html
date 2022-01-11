@@ -7,7 +7,7 @@
     <!-- ====Unicons==== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!-- ====Swiper CSS==== -->
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <!-- ====CSS==== -->
     <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -501,10 +501,10 @@
             <h2 class="section__title">Portfolio</h2>
             <span class="section__subtitle">Most recent work</span>
 
-            <div class="portfolio__container container">
-                <div>
+            <div class="portfolio__container container swiper-container">
+                <div class="swiper-wrapper">
                     <!-- =====Portfolio 1===== -->
-                    <div class="portfolio__content grid">
+                    <div class="portfolio__content grid swiper-slide">
                         <img src="assets/img/profileHome.jpg" alt="" class="portfolio__img">
 
                         <div class="portfolio__data">
@@ -519,8 +519,8 @@
                     </div>
 
                     <!-- =====Portfolio 2===== -->
-                    <div class="portfolio__content grid">
-                        <img src="assets/img/profileHome.jpg" alt="" class="portfolio__img">
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="assets/img/profileAbout.jpg" alt="" class="portfolio__img">
 
                         <div class="portfolio__data">
                             <h3 class="portfolio__title">Online Store</h3>
@@ -532,11 +532,31 @@
                             </a>
                         </div>
                     </div>
-
                 </div>
+                <!-- ===Arrow=== -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- ===Pagination=== -->
+                <div class="swiper-pagination"></div>
+                
             </div>
         </section>
     </main>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            cssMode: true,
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+            el: ".swiper-pagination",
+            },
+            mousewheel: true,
+            keyboard: true,
+        });
+    </script>
 </body>
 </html>
