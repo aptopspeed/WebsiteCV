@@ -534,8 +534,12 @@
                     </div>
                 </div>
                 <!-- ===Arrow=== -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                </div>
                 <!-- ===Pagination=== -->
                 <div class="swiper-pagination"></div>
                 
@@ -547,15 +551,16 @@
     <script>
         var swiper = new Swiper('.swiper-container', {
             cssMode: true,
+            loop:true,
+
             navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
             },
             pagination: {
             el: ".swiper-pagination",
+            clickable: true,
             },
-            mousewheel: true,
-            keyboard: true,
         });
     </script>
 </body>
